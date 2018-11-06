@@ -21,9 +21,12 @@
   <!-- endinject -->
   <link rel="shortcut icon" href="{{asset('admin/images/favicon.html')}}" />
 </head>
+<!--======================================================================================================  -->
 <body class="sidebar-dark">
+
   <div class="container-scroller">
     <!-- partial:partials/_navbar.html -->
+
     <nav class="navbar navbar-light col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
       <div class="text-center navbar-brand-wrapper">
         <a class="navbar-brand brand-logo" href="index.html"><img src="admin/images/BHTCnew.png" alt="Logo"></a>
@@ -45,9 +48,10 @@
         </button>
       </div>
     </nav>
-<!-- =========================================================================================================  -->   
+   
     <!-- partial -->
     <div class="container-fluid page-body-wrapper">
+       @yield('content') 
       <div class="row row-offcanvas row-offcanvas-right">
         <!-- partial:partials/_sidebar.html -->
         <nav class="sidebar sidebar-offcanvas" id="sidebar">
@@ -77,9 +81,10 @@
                 <span class="menu-title">Category</span>
                 <span class="badge badge-danger badge-pill ml-auto">New</span>
               </a>
-            </li> -->
+            </li> --> 
+             
             <li class="nav-item">
-              <a class="nav-link" data-toggle="collapse" href="#authSubmenu" aria-expanded="false" aria-controls="authSubmenu">
+              <a class="nav-link" data-toggle="collapse" href="{{URL::to('/category')}}" aria-expanded="false" aria-controls="authSubmenu">
                 <i class="mdi mdi-lock-outline menu-icon"></i>
                 <span class="menu-title">Category</span>
                  <span class="badge badge-danger badge-pill ml-auto">New</span>
